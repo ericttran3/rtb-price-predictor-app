@@ -153,7 +153,6 @@ st.markdown("---")
 ###################################################################################################################
 st.subheader('CPM Price Distribution by Feature')
 columns = ['advertiser_id', 'site_id', 'line_item_type_id', 'monetization_channel_id', 'ad_type_id', 'device_category_id', 'os_id', 'day_of_week']
-st.set_option('deprecation.showPyplotGlobalUse', False)
 
 def get_visualizations():
 	fig, axes = plt.subplots(nrows=4, ncols=2, figsize=(20, 15))
@@ -163,7 +162,7 @@ def get_visualizations():
 		axes[idx // 2, idx % 2].set_ylabel('CPM')
 
 st.pyplot(get_visualizations())
-
+st.set_option('deprecation.showPyplotGlobalUse', False)
 st.markdown("---")
 
 ###################################################################################################################
@@ -201,7 +200,6 @@ if all([x1, x2, x3, x4, x5, x6, x7, x8, x9, x10]):
 
 
 	# Model Info
-
 	expander_bar = st.beta_expander("About the Model")
 	expander_bar.markdown("""**Model:** Random Forest Regressor""")
 	expander_bar.markdown("""**Accuracy:** 73%""")
