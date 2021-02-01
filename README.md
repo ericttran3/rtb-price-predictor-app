@@ -1,6 +1,7 @@
 # rtb-price-predictor-app
 A web app that predicts a reserve CPM price for Publishers.
 
+### Background
 This project is aimed to design a prediction system that will predict the cost per impression (CPM) or reserve price an advertiser should pay for an ad slot on a publisher's website. An algorithm and prediction model will be used in the project. The system will be used by the Publisher to identify a `pred_CPM` to better forecast how much their ad inventory is worth.
 
 Real-time bidding (RTB) refers to programmatic advertising or the online auction process where buying and selling of online ad impressions are done in real-time and often facilitated through an ad exchange. This happens when a user lands on a website, the bidders (advertisers) bid for different ad slots on the page and the one with the highest winning bid displays their ad in the ad space and pays the amount he/she bid to the exchange.
