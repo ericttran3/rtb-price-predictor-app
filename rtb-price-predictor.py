@@ -7,7 +7,7 @@ import base64
 import time
 
 plt.style.use('ggplot')
-st.set_option('deprecation.showPyplotGlobalUse', False)
+#st.set_option('deprecation.showPyplotGlobalUse', False)
 
 ###################################################################################################################
 # Page Layout settings
