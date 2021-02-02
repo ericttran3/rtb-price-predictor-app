@@ -26,6 +26,12 @@ The goal of this dataset is to predict the base price an advertiser would need t
 ### Data Sources
 The advertising data can be found on kaggle: https://www.kaggle.com/saurav9786/real-time-advertisers-auction
 
+### Tools
+- ML Enviornment: Google Collab : https://colab.research.google.com/
+- Models: Scikit-learn: https://scikit-learn.org/stable/
+- Web App: Streamlit: https://www.streamlit.io/
+- Cloud Application Platform: https://www.heroku.com/
+
 ### Notes
 - Publisher – person who owns and publishes content on the website
 - Inventory – all the users that visit the website * all the ad slots present in the website for the observation period
