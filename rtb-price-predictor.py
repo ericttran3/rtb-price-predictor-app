@@ -135,9 +135,10 @@ expander_bar.markdown("""
 | total_revenue | float | measurement column measuring the revenue for the particular set of dimensions |
 | revenue_share_percentage | float | not every advertiser gives all the revenue to the publisher. They charge a certain share for the services they provide. This captures the fraction of revenue that will actually reach the publishers pocket |
 | cpm | float | CPM: cost-per-thousand impressions. A measure that calculates the Adverrtiser's cost for 1000 impressions
-
 """)
+expander_bar.write("")
 
+# Display Data
 sample = df.sample(number_input)
 
 st.dataframe(df.describe().T)
