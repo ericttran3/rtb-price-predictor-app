@@ -27,10 +27,10 @@ The goal of this dataset is to predict the base price an advertiser would need t
 The advertising data can be found on kaggle: https://www.kaggle.com/saurav9786/real-time-advertisers-auction
 
 ### Tools
-- ML Enviornment: [Google Collab](https://colab.research.google.com/)
-- Models: [Scikit-learn](https://scikit-learn.org/stable/)
-- Web App: [Streamlit](https://www.streamlit.io/)
-- Cloud Application Platform: [Heroku](https://www.heroku.com/)
+- `google collab` as the ML enviornment
+- `scikit-learn` for our ML models
+- `streamlit` as the web framework
+- `heroku` as our cloud application platform
 
 ### Notes
 - Publisher – person who owns and publishes content on the website
