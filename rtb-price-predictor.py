@@ -168,8 +168,10 @@ st.markdown("---")
 ###################################################################################################################
 # Modeling
 ################################################################################################################### 
+from sklearn.ensemble import RandomForestRegressor
 import pickle
 import boto3
+
 s3client = boto3.client('s3')
 response = s3client.get_object(Bucket='et3-datasets', Key='rtb-price-predictor-app/rf_reg.pkl')
 body = response['Body'].read()
