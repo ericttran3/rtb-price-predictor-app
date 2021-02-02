@@ -172,8 +172,17 @@ st.markdown("---")
 from sklearn.ensemble import RandomForestRegressor
 import pickle
 import boto3
+import boto3.session
 
-s3client = boto3.client('s3')
+# Credentials
+cred = boto3.Session().get_credentials()
+ACCESS_KEY = cred.access_key
+SECRET_KEY = cred.secret_key
+
+s3client = boto3.client('s3', 
+                        aws_access_key_id = ACCESS_KEY, 
+                        aws_secret_access_key = SECRET_KEY
+                       )
 response = s3client.get_object(Bucket='et3-datasets', Key='rtb-price-predictor-app/rf_reg.pkl')
 body = response['Body'].read()
 model = pickle.loads(body)
