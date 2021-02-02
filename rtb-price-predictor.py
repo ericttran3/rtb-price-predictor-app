@@ -210,6 +210,9 @@ if all([x1, x2, x3, x4, x5, x6, x7, x8, x9, x10]):
 	st.text('- Device Category ID: {}'.format(x9[0]))
 	st.text('- Operating System ID: {}'.format(x10[0]))
 
+	# Download CSV File
+	st.write("")
+	st.write("[Download Predictions](https://et3-datasets.s3.amazonaws.com/rtb-price-predictor-app/rtb-ads-dataset-predictions.csv)")
 
 	# Model Info
 	expander_bar = st.beta_expander("About the Model")
@@ -231,11 +234,9 @@ if all([x1, x2, x3, x4, x5, x6, x7, x8, x9, x10]):
 
 	st.balloons()
 
+	
+
 
 ###################################################################################################################
 ## Closing Notes
 ################################################################################################################### 
-
-# Download CSV File
-st.write("")
-st.write("[Download Predictions](https://et3-datasets.s3.amazonaws.com/rtb-price-predictor-app/rtb-ads-dataset-predictions.csv)")
