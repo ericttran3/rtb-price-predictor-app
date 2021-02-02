@@ -175,14 +175,17 @@ import pickle
 import boto3
 import os
 
+with open('./models/rf_reg.pkl', 'rb') as pkl:
+	model = pickle.load(pkl)
+
 # Credentials
-s3client = boto3.client('s3', 
-                        aws_access_key_id = os.environ['ACCESS_KEY'], 
-                        aws_secret_access_key = os.environ['SECRET_KEY']
-                       )
-response = s3client.get_object(Bucket='et3-datasets', Key='rtb-price-predictor-app/rf_reg.pkl')
-body = response['Body'].read()
-model = pickle.loads(body)
+#s3client = boto3.client('s3', 
+#                        aws_access_key_id = os.environ['ACCESS_KEY'], 
+#                        aws_secret_access_key = os.environ['SECRET_KEY']
+#                       )
+#response = s3client.get_object(Bucket='et3-datasets', Key='rtb-price-predictor-app/rf_reg.pkl')
+#body = response['Body'].read()
+#model = pickle.loads(body)
 
 ## Modeling
 st.subheader('CPM Price Prediction')
