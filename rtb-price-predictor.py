@@ -175,17 +175,17 @@ import pickle
 import boto3
 import os
 
-with open('./models/rf_reg.pkl', 'rb') as pkl:
-	model = pickle.load(pkl)
+#with open('./models/rf_reg.pkl', 'rb') as pkl:
+#	model = pickle.load(pkl)
 
 # Credentials
-#s3client = boto3.client('s3', 
-#                        aws_access_key_id = os.environ['ACCESS_KEY'], 
-#                        aws_secret_access_key = os.environ['SECRET_KEY']
-#                       )
-#response = s3client.get_object(Bucket='et3-datasets', Key='rtb-price-predictor-app/rf_reg.pkl')
-#body = response['Body'].read()
-#model = pickle.loads(body)
+s3client = boto3.client('s3', 
+                        aws_access_key_id = os.environ['ACCESS_KEY'], 
+                        aws_secret_access_key = os.environ['SECRET_KEY']
+                       )
+response = s3client.get_object(Bucket='et3-datasets', Key='rtb-price-predictor-app/rf_reg_super_simple.pkl')
+body = response['Body'].read()
+model = pickle.loads(body)
 
 ## Modeling
 st.subheader('CPM Price Prediction')
@@ -235,3 +235,6 @@ if all([x1, x2, x3, x4, x5, x6, x7, x8, x9, x10]):
 ###################################################################################################################
 ## Closing Notes
 ################################################################################################################### 
+
+# Download CSV File
+st.write('Download')
