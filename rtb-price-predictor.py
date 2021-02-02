@@ -35,7 +35,7 @@ st.markdown("A web app that predicts a reserve CPM price for Publishers.")
 st.markdown("""
 Programmatic advertising uses your predicted value CPM rates to select the highest bidder. When your value CPMs are outdated, your networks could be competing with incorrect rates, 
 preventing you from maximizing ad revenue. With this predictor, you could increase your revenue by updating your value CPM rates at least once per month. 
-You can run optimization tests to determine what the sweet spot for your CPM rates are to maximize ad utilization and revenue.
+From there, you can run optimization tests to determine what the sweet spot is for your CPM rates to maximize ad utilization and revenue.
 """)
 st.markdown("""
 \n The real-time ad bidding price predictor will take in the following inputs to determine what the reserve price should be set at: 
@@ -153,6 +153,8 @@ st.markdown("---")
 ###################################################################################################################
 # Data Visualizations
 ###################################################################################################################
+
+
 st.subheader('CPM Price Distribution by Feature')
 columns = ['advertiser_id', 'site_id', 'line_item_type_id', 'monetization_channel_id', 'ad_type_id', 'device_category_id', 'os_id', 'day_of_week']
 
@@ -163,8 +165,8 @@ def get_visualizations():
 		axes[idx // 2, idx % 2].set_xlabel(feat)
 		axes[idx // 2, idx % 2].set_ylabel('CPM')
 
-st.pyplot(get_visualizations())
 st.set_option('deprecation.showPyplotGlobalUse', False)
+st.pyplot(get_visualizations())
 st.markdown("---")
 
 ###################################################################################################################
