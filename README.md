@@ -29,6 +29,7 @@ The advertising data can be found on kaggle: https://www.kaggle.com/saurav9786/r
 ### Tools
 - `google collab` as the ML enviornment
 - `scikit-learn` for our ML models
+- `aws s3` to store our data and model
 - `streamlit` as the web app framework
 - `heroku` as our cloud application platform
 
