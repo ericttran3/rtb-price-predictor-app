@@ -138,9 +138,10 @@ expander_bar.markdown("""
 """)
 expander_bar.write("")
 
-# Display Data
+# Sample of data
 sample = df.sample(number_input)
 
+# Display Data
 st.dataframe(df.describe().T)
 
 if st.checkbox('Show Raw Data'):
