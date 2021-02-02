@@ -168,12 +168,12 @@ st.markdown("---")
 ###################################################################################################################
 # Modeling
 ################################################################################################################### 
-from sklearn.ensemble import RandomForestRegressor
 import pickle
-
-import pickle
-with open('./models/rf_reg.pkl', 'rb') as pkl:
-	model = pickle.load(pkl)
+import boto3
+s3client = boto3.client('s3')
+response = s3client.get_object(Bucket='et3-datasets', Key='rtb-price-predictor-app/rf_reg.pkl')
+body = response['Body'].read()
+model = pickle.loads(body)
 
 ## Modeling
 st.subheader('CPM Price Prediction')
