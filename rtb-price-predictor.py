@@ -237,4 +237,4 @@ if all([x1, x2, x3, x4, x5, x6, x7, x8, x9, x10]):
 ################################################################################################################### 
 
 # Download CSV File
-st.write('Download')
+st.write("[Download Predictions](https://et3-datasets.s3.amazonaws.com/rtb-price-predictor-app/rtb-ads-dataset-predictions.csv)")
