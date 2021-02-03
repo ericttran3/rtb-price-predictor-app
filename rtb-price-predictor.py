@@ -185,7 +185,7 @@ s3client = boto3.client('s3',
                         aws_access_key_id = os.environ['ACCESS_KEY'], 
                         aws_secret_access_key = os.environ['SECRET_KEY']
                        )
-response = s3client.get_object(Bucket='et3-datasets', Key='rtb-price-predictor-app/rf_reg_super_simple.pkl')
+response = s3client.get_object(Bucket='et3-datasets', Key='rtb-price-predictor-app/rf_reg_super_simple_model.pkl')
 body = response['Body'].read()
 model = pickle.loads(body)
 
@@ -219,8 +219,8 @@ if all([x1, x2, x3, x4, x5, x6, x7, x8, x9, x10]):
 	# Model Info
 	expander_bar = st.beta_expander("About the Model")
 	expander_bar.markdown("""**Model:** Random Forest Regressor""")
-	expander_bar.markdown("""**Accuracy:** 73%""")
 	expander_bar.markdown("""**RMSE:** $0.545""")	
+	expander_bar.markdown("""**Accuracy:** Our model is able to predict the CPM with an error of +/- 0.54 cents.""")
 	expander_bar.markdown("""
 	Tree-based algorithm. Random forests are an ensemble method where hundreds (or thousands) of individual decision trees are fit to boostrap re-samples of the original dataset, with each tree being allowed to use a random selection of N variables, where N is the major configurable parameter of this algorithm.
 
