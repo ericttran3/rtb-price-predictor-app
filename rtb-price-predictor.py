@@ -157,16 +157,29 @@ st.markdown("---")
 
 st.subheader('CPM Price Distribution by Feature')
 columns = ['advertiser_id', 'site_id', 'line_item_type_id', 'monetization_channel_id', 'ad_type_id', 'device_category_id', 'os_id', 'day_of_week']
+columns_2 = ['geo_id', 'order_id', 'ad_unit_id']
 
-def get_visualizations():
+def get_visualizations_multi():
 	fig, axes = plt.subplots(nrows=4, ncols=2, figsize=(20, 15))
 	for idx, feat in  enumerate(columns):
 		sns.boxplot(x=feat, y='CPM', data=df, ax=axes[idx // 2, idx % 2],  showfliers=False,)
 		axes[idx // 2, idx % 2].set_xlabel(feat)
 		axes[idx // 2, idx % 2].set_ylabel('CPM')
 
+def get_visualizations_single():
+	fig, axes = plt.subplots(nrows=3, ncols=1, figsize=(30, 15))
+	for idx, feat in  enumerate(columns_2):
+		sns.boxplot(x=feat, y='CPM', data=df, ax=axes[idx], showfliers=False)
+		axes[idx].set_xlabel(feat)
+		axes[idx].set_ylabel('CPM');
+		xax = axes[idx].xaxis
+		xlabels = xax.get_ticklabels()
+		for label in xlabels:
+			label.set_rotation(90)
+
 st.set_option('deprecation.showPyplotGlobalUse', False)
-st.pyplot(get_visualizations())
+st.pyplot(get_visualizations_multi())
+st.pyplot(get_visualizations_single())
 st.markdown("---")
 
 ###################################################################################################################
